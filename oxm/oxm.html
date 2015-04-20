@@ -8,8 +8,8 @@
     <title>Chauncity</title>
 
     <!-- Bootstrap -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../styles/main.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -70,8 +70,84 @@
 
 
 
-  <div class = "container">
+	  <div class = "container">
+        <h1>Hello, world!</h1>
+	    <div class = "row">
+		  <div class = "col-sm-3 col-xs-12">
+			<div id="p1" class="panel panel-primary">
+			  <div id="p1h" class="panel-heading">
+			    <h3 class="panel-title">Widget 1</h3>
+			  </div>
+			  <div id='p1b' class="panel-body">
+   			    <button type="button" class="btn btn-primary">Primary</button>
+			  </div>
+			</div>
+		  </div>
+		  <div class = "col-sm-3 col-xs-4">
+			<div id="p2" class="panel panel-danger">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">Widget 2</h3>
+			  </div>
+			  <div class="panel-body">
+   			    <button type="button" class="btn btn-danger">Danger</button>
+			  </div>
+			</div>
+		  </div>
+		  <div class = "col-sm-3 col-xs-4">
+			<div id="p3" class="panel panel-success">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">Widget 3</h3>
+			  </div>
+			  <div class="panel-body">
+   			    <button type="button" class="btn btn-success">Success</button>
+			  </div>
+			</div>
+		  </div>
+		  <div class = "col-sm-3 col-xs-4">
+			<div id="p4" class="panel panel-warning">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">Widget 4</h3>
+			  </div>
+			  <div class="panel-body">
+   			    <button type="button" class="btn btn-warning">Warning</button>
+			  </div>
+		    </div>
+		  </div>
+	    </div>
+
+    <!-- Standard button -->
+    <button type="button" class="btn btn-default">Default</button>
+    
+    <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+    <button id='b1' type="button" class="btn btn-primary">Primary</button>
+    
+    <!-- Indicates a successful or positive action -->
+    <button id='b2' type="button" class="btn btn-success">Success</button>
+    
+    <!-- Contextual button for informational alert messages -->
+    <button type="button" class="btn btn-info">Info</button>
+    
+    <!-- Indicates caution should be taken with this action -->
+    <button type="button" class="btn btn-warning">Warning</button>
+    
+    <!-- Indicates a dangerous or potentially negative action -->
+    <button type="button" class="btn btn-danger">Danger</button>
+    
+    <!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
+    <button type="button" class="btn btn-link">Link</button>
+
+
+
   </div>
+  <div class="container">
+    <ul class="addls">
+	  <li>new</li>
+    </ul>
+	<input class='in_name' type="text"></input>
+    <button class='addbtn'>Add one</button>
+  </div>
+
+
 
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
@@ -81,6 +157,16 @@
     <script src="../js/bootstrap.min.js"></script>
 
 	<script src="../scripts/main.js"> </script>
+	<script>
+	  $(function(){
+		  $('#b1').on('click',function(){
+			$('#p1b').slideToggle(200);
+			});
+		  $('#p1h').on('click',function(){
+			$('#p1b').slideToggle(200);
+			});
+	  });
+	</script>
 
 
   </body>
