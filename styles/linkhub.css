@@ -1,0 +1,21 @@
+header {
+  margin: 0px 0px 12% 0px;
+}
+div img {
+  margin:20px 10px 10px 10px;
+  padding:5px;
+  border:1px solid #999;
+  border-radius: 20px;
+  box-shadow: 4px 4px 4px #999; 
+  height: 100px;
+  width: auto;
+  float: left;
+  text-align: center;
+}
+
+.desc {
+    text-align: center;
+    font-weight: arial;
+    width: 120px;
+    margin: 5px;
+}
