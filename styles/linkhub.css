@@ -2,7 +2,7 @@ header {
   margin: 0px 0px 12% 0px;
 }
 div img {
-  margin:20px 10px 10px 10px;
+  margin:20% 10px 10px 10px;
   padding:5px;
   border:1px solid #999;
   border-radius: 20px;
@@ -15,7 +15,7 @@ div img {
 
 .desc {
     text-align: center;
-    font-weight: arial;
+    font-family: arial;
     width: 120px;
-    margin: 5px;
+    margin: 2px;
 }
