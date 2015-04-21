@@ -9,14 +9,14 @@
 
     <!-- Bootstrap -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../styles/main.css" rel="stylesheet">
+    <link href="../styles/autodoor_login.css" rel="stylesheet">
 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-	
+
 
   </head>
   <body>
@@ -50,7 +50,7 @@
 		      </ul>
 			</li>
 
-            <li><a href="../linkhub.html">LinkHub</a></li>
+            <li><a href="../Linkhub.html">LinkHub</a></li>
 
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Contact<span class="caret"></span></a>
@@ -68,9 +68,33 @@
     </div>
   </header>
 
+  <!-- Beautiful login box -->
+  <section class="login">
+	<div class="titulo">Autodoor Login</div>
+	<form action="/cgi-bin/door.py" method="post" enctype="application/x-www-form-urlencoded">
+    	<input type="text" required title="Username required" placeholder="Username" data-icon="U">
+        <input type="password" required title="Password required" placeholder="Password" data-icon="x">
+        <div class="olvido">
+        	<div class="col"><a href="call911.html" title="Ver Carásteres">Register</a></div>
+            <div class="col"><a href="call911.html" title="Recuperar Password">Fotgot Password?</a></div>
+        </div>
+        <a href="#" class="enviar">Submit</a>
+    </form>
+  </section>
 
-
-  <div class = "container">
+  <!-- Unlock and lock -->
+  <div class = "row">
+	<div class = "col-sm-3 col-xs-0"></div>
+	<div class = "col-sm-3 col-xs-12">
+	  <div class="center-block" style="width:200px;">
+	  <a href="#"><img src="/img/autodoor/Honeycomb_Unlock.png" width="200px"></a>
+	  </div>
+	</div>
+	<div class = "col-sm-3 col-xs-12">
+	  <div class="center-block" style="width:200px;">
+	  <a href="#"><img src="/img/autodoor/Honeycomb_Lock.png" width="200px"/></a>
+    </div>
+	<div class = "col-sm-3 col-xs-0"></div>
   </div>
 
 	<!-- Latest compiled and minified JavaScript -->
@@ -85,4 +109,6 @@
 
   </body>
 </html>
+
+
 
