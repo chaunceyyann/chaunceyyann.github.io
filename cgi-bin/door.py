@@ -2,7 +2,7 @@
 import socket
 import cgi, cgitb 
 
-host = 'chauncity.onthewifi.com'
+host = '0.0.0.0'
 port = 5555
 size = 1024
 data = 'ERROR'
@@ -20,7 +20,6 @@ form = cgi.FieldStorage()
 username = form.getvalue('username')
 password  = form.getvalue('pin')
 request = form.getvalue('request')
-verify = form.getvalue('Verify')
 print "Content-type:text/html\r\n\r\n"
 print '<html>'
 print '<head>'
@@ -29,14 +28,14 @@ print '</head>'
 print '<body>'
 print '<h2>Contacting Earth to unlock the door, now.</h2>'
 
-if verify == None and request == None:
+if request == None:
 	data = 'Unsuported Browser.. for now sorry! :('
 
-if username != '' and password != '' and verify != None:
+if username != '' and password != '' and request != '' and request != None:
 	message = "<message><type>handshake</type><user>%s</user><pin>%s</pin></message>" % (username, password)
 	s.send(message)
 	data = s.recv(size)
-	print "<p>User:%s, pin:%s, Request:(%s)</p>" % (username, password, request)
+	#print "<p>User:%s, pin:%s, Request:(%s)</p>" % (username, password, request)
 		
 	if data == '<message> <type>handshake</type> <from>earth</from> </message>':
 		print "<h2>PASSED</h2>"
@@ -51,9 +50,11 @@ if username != '' and password != '' and verify != None:
 else:
 	print "<h2>FAILED</h2>"
 	print "<p>%s: Invalid Request.</p>" % (data)
+
+print "<script>"
+print "function goBack() {javascript: history.go(-1);}"
+print "function timer() {setTimeout('goBack()', 200);}"
+print "window.onload=timer;"
+print "</script>"
 print '</body>'
 print '</html>'
-
-
-
-
