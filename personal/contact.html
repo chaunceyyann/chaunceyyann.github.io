@@ -1,75 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <title>Chauncity</title>
-
-
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-  
-  <!-- Optional theme -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
- 
-  <!-- Bootstrap -->
-  <link href="../css/bootstrap.min.css" rel="stylesheet">
-  <link href="../styles/main.css" rel="stylesheet">
-
+<script>
+function handleLoad(e) {
+    console.log('Loaded import: ' + e.target.href);
+}
+function handleError(e) {
+    console.log('Error loading import: ' + e.target.href);
+}
+</script>
+<link rel="import" href="/nav.html" onload="handleLoad(event)" onerror="handleError(event)">
 </head>
 <body>
-  <header class = "navbar-inverse" role = "banner">
-    <div class= "container">
-      <nav role = "navigation">
+<script>
+var link = document.querySelector('link[rel="import"]');
+var content = link.import;
+// Grab DOM from warning.html's document.
+var el = content.querySelector('.navbar-inverse');
+document.body.appendChild(el.cloneNode(true));
+</script>
 
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="../index.html">Chauncity</a>
-        </div>
-    
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li><a href="../autodoor/lock.html">Autodoor <span class="sr-only">(current)</span></a></li>
-            <li><a href="../oxm/oxm.html">OxygenMonitor <span class="sr-only">(current)</span></a></li>
-
-            <li class="dropdown">
-			  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Projects<span class="caret"></span></a>
-			  <ul class="dropdown-menu" role="menu">
-		        <li><a href="../autodoor/des.html">Autodoor</a></li>
-		     	<li><a href="../oxm/des.html">OxygenMonitor</a></li>
-		    	<li><a href="../quadcopter/des.html">Quadcopter</a></li>
-		      </ul>
-			</li>
-
-            <li><a href="../linkhub.html">LinkHub</a></li>
-
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Contact<span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="../personal/resume.html">Resume</a></li>
-                <li><a href="../personal/contact.html">Contact Information</a></li>
-                <li class="divider"></li>
-                <li><a href="http://www.welchallyn.com/en.html">Current Company: Welch Alynn</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-
-      </nav>
-    </div>
-  </header>
-
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
