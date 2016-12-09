@@ -1,4 +1,4 @@
-Chauncity.com
+CyanLab
 =====
-A personal website that help me learn better website design and development.
+A personal website that showcase what I have done recently.
 
