@@ -1,33 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script>
-function handleLoad(e) {
-    console.log('Loaded import: ' + e.target.href);
-}
-function handleError(e) {
-    console.log('Error loading import: ' + e.target.href);
-}
-</script>
-<link rel="import" href="/nav.html" onload="handleLoad(event)" onerror="handleError(event)">
-
-<link href="styles/linkhub.css" rel="stylesheet">
-
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- the above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<title>CyanLab</title>
+<!-- bootstrap -->
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+<link href="/styles/main.css" rel="stylesheet">
+<!-- latest compiled and minified css -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<!-- optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 <!-- Add to home screen for apple & android devices -->	
 <link rel="apple-touch-icon" href="img/webicons/Linkhub.png">
 <link rel="icon" sizes="192x192" href="img/webicons/Linkhub_icon.png">
-
 </head>
 <body>
-<script>
-var link = document.querySelector('link[rel="import"]');
-var content = link.import;
-// Grab DOM from warning.html's document.
-var el = content.querySelector('.navbar-inverse');
-document.body.appendChild(el.cloneNode(true));
-</script>
-
-
+<div id="nav-placeholder"></div>
 <div class = "container">
     <div class = "row">
         <div class = "col-sm-2 col-xs-6">
@@ -108,22 +99,26 @@ document.body.appendChild(el.cloneNode(true));
 
     </div>
 
-
-
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script src="scripts/main.js"> </script>
     <script>
-      $(function(){
+$(function(){
         $('#p1').on('click',function(){
-           $('#p1b').slideToggle(200);
-           });
-      });
+                $('#p1b').slideToggle(200);
+                });
+        });
+    </script>
+    <!-- jQuery include -->
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script>
+    $.get("nav.html", function(data){
+        $("#nav-placeholder").replaceWith(data);
+        });
     </script>
 
-
-    </body>
-    </html>
+</body>
+</html>
 
