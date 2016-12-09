@@ -1,38 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script>
-function handleLoad(e) {
-    console.log('Loaded import: ' + e.target.href);
-}
-function handleError(e) {
-    console.log('Error loading import: ' + e.target.href);
-}
-</script>
-<link rel="import" href="/nav.html" onload="handleLoad(event)" onerror="handleError(event)">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="Personal Website" content="">
+    <meta name="Chauncey Yan" content="">
+
+    <title>Quadcopters</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <script src="/js/ie-emulation-modes-warning.js"></script>
+    <link href="/css/main.css" rel="stylesheet">
+    <link href="quad.css" rel="stylesheet">
+
+    <!-- Add to home screen for apple & android devices -->	
+
 </head>
 <body>
-<script>
-var link = document.querySelector('link[rel="import"]');
-var content = link.import;
-// Grab DOM from warning.html's document.
-var el = content.querySelector('.navbar-inverse');
-document.body.appendChild(el.cloneNode(true));
-</script>
+<div id="nav-placeholder"></div>
+<section id="section">
+<div class="main">
+      <div class="container">
+        <h1>
+          Autodoor: Keyless unlock
+        </h1>
+        <h2>
+          Self controled door lock with Raspberry Pi and Adruino.
+        </h2>
+        <br>
+        <a class="download"
+            href="https://github.com/quinnsam/Autodoor/tree/cyanjin">View Autodoor on Github</a>
+      </div>
+    </div>
+
+    <!-- The first section div -->
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <img src="/img/autodoor/v1.jpg" alt="Raspberry Pi B+"
+            style="width:320px;">
+          </div>
+          
+          <div class="col-md-6">
+            <h1>
+              Raspberry Pi B+
+            </h1>
+            <p>
+                Python script in charge of reporting smartphone Wifi
+                connectivities for home coming automatical unlocking.
+            </p>
+            
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- The second section div -->
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h1>
+              Arduino Uno
+            </h1>
+            <p>
+                Arduino Uno controling servo to unlock doorknob trigged by Raspberry Pi
+                and proximity sensor inside.
+            </p>
+            </div>
+          
+          <div class="col-md-6">
+            <img src="/img/autodoor/v2.jpg" alt="Raspberry Pi B+"
+            style="width:320px;">
+            </div>
+          
+        </div>
+        
+
+      </div>
+    </div>
+
+    <!-- The third section div -->
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <img src="/img/autodoor/h2.jpg" alt="Raspberry Pi B+"
+            style="width:400px;">
+
+          </div>
+          
+          <div class="col-md-6">
+            <h1>
+              Python Tk interface
+            </h1>
+            <p>
+                Python commands Tk GUI running on Raspberry Pi accessed remotely
+                using a VNC viewer on iPad.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- The footer div -->
+    <div class="footer">
+      <div class="container">
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2016 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
+
+    </div><!-- /.container -->
 
 
-
-<div class = "container">
-</div>
-
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="../js/bootstrap.min.js"></script>
-
-<script src="../scripts/main.js"> </script>
-
-
-</body>
+      </div>
+    </div>
+</section>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="/js/vendor/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script>
+    $.get("/pages/navigation.html", function(data){
+            $("#nav-placeholder").replaceWith(data);
+            });
+    </script>
+  </body>
 </html>
+
 

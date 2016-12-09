@@ -1,68 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-	<!-- Add to home screen for apple & android devices -->	
-	<link rel="apple-touch-icon" href="../img/webicons/Ulock_icon.png">
-	<link rel="icon" sizes="192x192" href="../img/webicons/Ulock_icon_hex.png">
-    <link href="/styles/autodoor_login.css" rel="stylesheet">
-<script>
-function handleLoad(e) {
-    console.log('Loaded import: ' + e.target.href);
-}
-function handleError(e) {
-    console.log('Error loading import: ' + e.target.href);
-}
-</script>
-<link rel="import" href="/nav.html" onload="handleLoad(event)" onerror="handleError(event)">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<meta name="Personal Website" content="">
+<meta name="Chauncey Yan" content="">
+
+<title>Sign in here</title>
+
+<link href="autodoor.css" rel="stylesheet">
+<!-- Bootstrap core CSS -->
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<link href="/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+<script src="/js/ie-emulation-modes-warning.js"></script>
+
+<link href="/css/main.css" rel="stylesheet">
+
+<!-- Add to home screen for apple & android devices -->	
+<link rel="apple-touch-icon" href="/img/webicons/Ulock_icon.png">
+<link rel="icon" sizes="192x192" href="/img/webicons/Ulock_icon_hex.png">
+
 </head>
 <body>
-<script>
-var link = document.querySelector('link[rel="import"]');
-var content = link.import;
-// Grab DOM from warning.html's document.
-var el = content.querySelector('.navbar-inverse');
-document.body.appendChild(el.cloneNode(true));
-</script>
+<div id="nav-placeholder"></div>
+<section id="section">
+    <!-- Beautiful login box -->
+    <section class="login">
+        <div class="titulo">Autodoor Login</div>
+        <form action="/cgi-bin/door.py" method="post" enctype="application/x-www-form-urlencoded">
+            <input type="text" required title="Username required" placeholder="Username" data-icon="U" name="username">
+            <input type="password" required title="Password required" placeholder="Password" data-icon="x" name="pin">
+            <div class="olvido">
+                <div class="col"><a href="call911.html" title="Ver Carásteres">Register</a></div>
+                <div class="col"><a href="call911.html" title="Recuperar Password">Fotgot Password?</a></div>
+            </div>
+            <input type="Submit" name="request" value="Calibrate" class="enviar">
+        </section>
 
-  <!-- Beautiful login box -->
-  <section class="login">
-  	<div class="titulo">Autodoor Login</div>
-  	  <form action="/cgi-bin/door.py" method="post" enctype="application/x-www-form-urlencoded">
-    	<input type="text" required title="Username required" placeholder="Username" data-icon="U" name="username">
-        <input type="password" required title="Password required" placeholder="Password" data-icon="x" name="pin">
-        <div class="olvido">
-        	<div class="col"><a href="call911.html" title="Ver Carásteres">Register</a></div>
-            <div class="col"><a href="call911.html" title="Recuperar Password">Fotgot Password?</a></div>
-        </div>
-        <input type="Submit" name="request" value="Calibrate" class="enviar">
-  </section>
+        <!-- Unlock and lock -->
+        <div class = "row">
+            <div class = "col-sm-3 col-xs-0"></div>
+            <div class = "col-sm-3 col-xs-12">
+                <div class="center-block" style="width:200px;">
+                    <input name="request" value="unlock" type="image" src="/img/autodoor/Honeycomb_Unlock.png" width="200px">
+                </div>
+            </div>
+            <div class = "col-sm-3 col-xs-12">
+                <div class="center-block" style="width:200px;">
+                    <input name="request" value="lock" type="image" src="/img/autodoor/Honeycomb_Lock.png" width="200px"/>
+                </div>
+                <div class = "col-sm-3 col-xs-0"></div>
+            </div>
+        </form>
 
-  <!-- Unlock and lock -->
-  <div class = "row">
-	<div class = "col-sm-3 col-xs-0"></div>
-	<div class = "col-sm-3 col-xs-12">
-	  <div class="center-block" style="width:200px;">
-	  <input name="request" value="unlock" type="image" src="/img/autodoor/Honeycomb_Unlock.png" width="200px">
-	  </div>
-	</div>
-	<div class = "col-sm-3 col-xs-12">
-	  <div class="center-block" style="width:200px;">
-	  <input name="request" value="lock" type="image" src="/img/autodoor/Honeycomb_Lock.png" width="200px"/>
-    </div>
-	<div class = "col-sm-3 col-xs-0"></div>
-  </div>
-  </form>
+    </section>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="/js/vendor/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/js/ie10-viewport-bug-workaround.js"></script>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../js/bootstrap.min.js"></script>
-
-	<script src="../scripts/main.js"> </script>
-
-
-  </body>
-</html>
-
-
-
+    <script src="/js/main.js"> </script>
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script>
+$.get("/pages/navigation.html", function(data){
+        $("#nav-placeholder").replaceWith(data);
+        });
+    </script>
+    </body>
+    </html>
