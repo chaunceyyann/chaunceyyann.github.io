@@ -6,7 +6,7 @@
   </head>
   <body>
 
-  <?php include("nav.php");?>
+  <div id="nav-placeholder">
     <div class="jumbotron">
       <div class="container">  
         <div class="main">
@@ -49,5 +49,11 @@
         <p>&copy; Broadway 2015</p>
       </div>
     </div>
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script>
+        $.get("navigation.html", function(data){
+        $("#nav-placeholder").replaceWith(data);
+        });
+    </script>
   </body>
 </html>
