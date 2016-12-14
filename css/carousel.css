@@ -44,7 +44,9 @@ body {
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
-  z-index: 10;
+  z-index: 10; 
+  background-color: rgba(66,66,66,0.8);
+  border-radius: 25px;
 }
 
 /* Declare heights because of positioning of img element */
@@ -54,13 +56,17 @@ body {
 }
 .carousel-inner > .item > img {
   position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  height: 500px;
+  top: 0; left: 0; bottom: 0; right: 0;
+  margin: auto;
+  //max-width:200%;
+  //max-height:500px;
 }
 
-
+.carousel-caption h1,.carouse-caption p{
+    color: white;
+    //vertical-align: middle;
+    text-shadow: 2px 2px 4px #333;
+}
 /* MARKETING CONTENT
 -------------------------------------------------- */
 
@@ -91,7 +97,9 @@ body {
   line-height: 1;
   letter-spacing: -1px;
 }
-
+img.featurette-image{
+  border-radius: 25px;
+}
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
