@@ -47,12 +47,14 @@ body {
   z-index: 10; 
   background-color: rgba(66,66,66,0.8);
   border-radius: 25px;
+  box-shadow: 2px 2px 3px #111;
 }
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
   height: 500px;
   background-color: #777;
+  box-shadow: 0 0 8px 8px white inset;
 }
 .carousel-inner > .item > img {
   position: absolute;
@@ -75,12 +77,16 @@ body {
   margin-bottom: 20px;
   text-align: center;
 }
-.marketing h2 {
+.marketing h2, .marketing p{
   font-weight: normal;
+  text-shadow: 1px 1px 2px #bbb;
 }
 .marketing .col-lg-4 p {
   margin-right: 10px;
   margin-left: 10px;
+}
+.marketing img {
+  box-shadow: 3px 3px 5px #888888;
 }
 
 
@@ -97,6 +103,10 @@ body {
   line-height: 1;
   letter-spacing: -1px;
 }
+
+//.featurette-heading {
+//  box-shadow: 3px 3px 5px #888888;
+//}
 img.featurette-image{
   border-radius: 25px;
 }
