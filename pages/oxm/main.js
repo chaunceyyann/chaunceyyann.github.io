@@ -46,6 +46,30 @@ function drawChart_hu() {
 }
 
 google.load("visualization", "1", {packages:["corechart"]});
+google.setOnLoadCallback(drawChart_co2);
+function drawChart_co2() {
+  var data_co2 = google.visualization.arrayToDataTable([
+	  ['Time', 'CO2'],
+	  [ 0,       456],
+	  [ 4,       477],
+	  [ 8,       508],
+	  [ 12,      384],
+	  [ 16,      423],
+	  [ 20,      438],
+	  [ 23,      443]
+	  ]);
+
+  var options_co2 = {
+	hAxis: {title: 'Time/h', minValue: 00, maxValue: 24},
+	vAxis: {title: 'CO2/ppm', minValue: 300, maxValue: 600},
+	legend: 'none'
+  };
+
+  var chart3 = new google.visualization.ScatterChart(document.getElementById('chart_div3'));
+  chart3.draw(data_co2, options_co2);
+}
+
+google.load("visualization", "1", {packages:["corechart"]});
 google.setOnLoadCallback(drawChart_tp);
 function drawChart_tp() {
   var data_tp = google.visualization.arrayToDataTable([
@@ -64,6 +88,6 @@ function drawChart_tp() {
 	legend: 'none'
   };
 
-  var chart3 = new google.visualization.ScatterChart(document.getElementById('chart_div3'));
-  chart3.draw(data_tp, options_tp);
+  var chart4 = new google.visualization.ScatterChart(document.getElementById('chart_div4'));
+  chart4.draw(data_tp, options_tp);
 }

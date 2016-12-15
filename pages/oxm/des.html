@@ -1,87 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="Personal Website" content="">
-    <meta name="Chauncey Yan" content="">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<meta name="Personal Website" content="">
+<meta name="Chauncey Yan" content="">
 
-    <title>Popular Sites</title>
+<title>Oxygen Monitor</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap core CSS -->
+<link href="/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<link href="/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
-    <script src="/js/ie-emulation-modes-warning.js"></script>
-    <link href="oxm.css" rel="stylesheet">
-    <link href="/css/main.css" rel="stylesheet">
+<script src="/js/ie-emulation-modes-warning.js"></script>
+<link href="oxm.css" rel="stylesheet">
+<link href="/css/main.css" rel="stylesheet">
 
-    <!-- Add to home screen for apple & android devices -->	
-    <style>div.auto {overflow: auto;} </style>
+<style>div.auto {overflow: auto;} </style>
+<!-- Add to home screen for apple & android devices -->	
 </head>
 <body>
 <div id="nav-placeholder"></div>
 <section id="section">
-<div class = "container">
-    <h1>Oxygen Monitor</h1>
-    <div class = "row">
-        <div class = "col-sm-6 col-xs-12">
-            <div id="p1" class="panel panel-primary">
-                <div id="p1h" class="panel-heading">
-                    <h3 class="panel-title">Oxygen vs. Time</h3>
-                </div>
-                <div id='p1b' class="panel-body">
-                    <div id="chart_div1" class="auto" style="width: 100%; height: 100%;"></div>
-                </div>
-            </div>
-        </div>
-        <div class = "col-sm-6 col-xs-12">
-            <div id="p2" class="panel panel-danger">
-                <div id="p2h" class="panel-heading">
-                    <h3 class="panel-title">Humidity vs. Time</h3>
-                </div>
-                <div id="p2b" class="panel-body">
-                    <div id="chart_div2" class="auto" style="width: 100%; height: 100%;"></div>
-                </div>
-            </div>
+    <div class="main">
+        <div class="container">
+            <h1>Oxygen Monitor Panel</h1>
+            <h2>Wastewater treatment plant gas data logger </h2>
         </div>
     </div>
-    <div class="row">
-        <div class = "col-sm-6 col-xs-12">
-            <div id="p3" class="panel panel-success">
-                <div id="p3h" class="panel-heading">
-                    <h3 class="panel-title">Serial Monitor</h3>
+
+    <div class = "container">
+        <div class = "row">
+            <div class = "col-sm-6 col-xs-12">
+                <div id="p1" class="panel panel-primary">
+                    <div id="p1h" class="panel-heading">
+                        <h3 class="panel-title">Oxygen vs. Time</h3>
+                    </div>
+                    <div id='p1b' class="panel-body">
+                        <div id="chart_div1" class="auto" style="width: 100%; height: 100%;"></div>
+                    </div>
                 </div>
-                <div id="p3b" class="panel-body">
-                    <ul class="addls">
-                        <li>Serial return</li>
-                    </ul>
-                    <div class="auto"><input class='in_name' type="text" size="60%"></input>
-                        <button type="button" class="btn btn-default btn-add">Submit</button></div>
+            </div>
+            <div class = "col-sm-6 col-xs-12">
+                <div id="p2" class="panel panel-danger">
+                    <div id="p2h" class="panel-heading">
+                        <h3 class="panel-title">Humidity vs. Time</h3>
+                    </div>
+                    <div id="p2b" class="panel-body">
+                        <div id="chart_div2" class="auto" style="width: 100%; height: 100%;"></div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class = "col-sm-6 col-xs-12">
-            <div id="p4" class="panel panel-warning">
-                <div id="p4h" class="panel-heading">
-                    <h3 class="panel-title">Temperature vs. Time</h3>
+        <div class="row">
+            <div class = "col-sm-6 col-xs-12">
+                <div id="p3" class="panel panel-success">
+                    <div id="p3h" class="panel-heading">
+                        <h3 class="panel-title">Carbon Dioxide vs. Time</h3>
+                    </div>
+                    <div id="p3b" class="panel-body">
+                        <div id="chart_div3" class="auto" style="width: 100%; height: 100%;"></div>
+                    </div>
                 </div>
-                <div id="p4b" class="panel-body">
-                    <div id="chart_div3" class="auto" style="width: 100%; height: 100%;"></div>
+            </div>
+            <div class = "col-sm-6 col-xs-12">
+                <div id="p4" class="panel panel-warning">
+                    <div id="p4h" class="panel-heading">
+                        <h3 class="panel-title">Temperature vs. Time</h3>
+                    </div>
+                    <div id="p4b" class="panel-body">
+                        <div id="chart_div4" class="auto" style="width: 100%; height: 100%;"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-</div>
+    <!-- The first section div -->
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <img src="img/floater4.jpg" alt="floater 2"
+            style="width:400px;">
+          </div>
+          <div class="col-md-6">
+            <h1> Second generation floater </h1>
+            <p> Hover above the water to gather gas and take samples on the ground. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- The second section div -->
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h1> First generation floater </h1>
+            <p> Tank floater above the water. takes measurement at top of the tank.</p>
+          </div>
+          <div class="col-md-6">
+            <img src="img/floater1.jpg" alt="floater 2"
+            style="width:400px;">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- The third section div -->
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <img src="img/receiver1.jpg" alt="receiver 1"
+            style="width:400px;">
+          </div>
+          <div class="col-md-6">
+            <h1> First generation receiver </h1>
+            <p> Built with Arduino Uno as the base platform, Zigbee for data transmition from floater, data transmition go through cellular chip as well, and Oxygen persentage display on lcd screen. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- The footer div -->
+    <div class="footer">
+      <div class="container">
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2016 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
+      </div><!-- /.container -->
+    </div>
 </section>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="/js/bootstrap.min.js"></script>
 
@@ -111,7 +171,7 @@ $(function(){
 <script>
 $.get("/pages/navigation.html", function(data){
         $("#nav-placeholder").replaceWith(data);
-});
+        });
 </script>
 
 </body>

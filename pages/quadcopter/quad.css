@@ -1,13 +1,16 @@
 img {
     display: block;
     margin: auto;
+    border-radius: 25px;
+    box-shadow: 3px 3px 5px #888888;
 }
 
 .main {
   height: 550px;
   padding-top: 55px;
-  background: url(/img/autodoor/h1.jpg) ;
+  background: url(img/lights.jpg) ;
   margin-top: 0px;
+  box-shadow: 0px -10px 20px white inset;
   background-size: cover;
 }
 
