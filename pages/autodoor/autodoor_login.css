@@ -5,8 +5,12 @@ website: http://www.dhenriquez.cl
 */
 
 body {
-  background: url("/img/autodoor/Watchdogs_City.png");
-  background-size:  1200px 125%;
+  background: url("/img/autodoor/Watchdogs_City.png") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+/*  background-size:  1200px 125%;*/
 }
 
 .login {

@@ -8,9 +8,13 @@ img {
   border-radius: 20px;
   box-shadow: 4px 4px 4px #999; 
   height: 100px;
+  background-color: white;
   width: auto;
   float: left;
   text-align: center;
+}
+h4 {
+  color:white;
 }
 
 .desc {
@@ -21,4 +25,17 @@ img {
 }
 #weblinks {
     padding-top: 8rem;
+	background-color: rgba(0, 0, 0, 0);
+}
+div, .gr__localhost{
+	background-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    background: url(/img/iOS7Galaxy.jpg) 
+no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
