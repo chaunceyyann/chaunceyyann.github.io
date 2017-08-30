@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 echo "Content-type: text/html"
 echo ""
 
@@ -17,11 +18,18 @@ echo '</head>'
 echo '<body>'
 
 echo '<h3>'
-hostname
+uptime
 echo '</h3>'
 
-uptime
-
+echo '<h3>'
+cowsay "Hello"
+echo '</h3>'
+echo '<h3>'
+type -a fortune
+echo '</h3>'
+echo '<h3>'
+type -a cowsay
+echo '</h3>'
 echo '</body>'
 echo '</html>'
 
